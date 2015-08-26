@@ -158,6 +158,9 @@ a {
   text-decoration: none;
   color: lightblue;
 }
+a:hover {
+  color: #8aacb8;
+}
 
 /* clearfix */
 .clearfix:before,
@@ -215,6 +218,25 @@ nav ul li {
   width: 33%;
   float: left;
   text-align: right;
+}
+
+.pawprint {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pawprint img {
+  margin: 0 auto;
 }
 
 #logo {

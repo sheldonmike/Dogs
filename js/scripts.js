@@ -211,3 +211,18 @@
 	        offset: 100
 	       });
 	});
+
+
+
+paw = document.getElementById("paw");
+
+var myScrollFunc = function() {
+  var y = window.scrollY;
+  if (y >= 100) {
+    paw.className = "pawprint valign-wrapper visible"
+  } else {
+    paw.className = "pawprint valign-wrapper hidden"
+  }
+};
+
+window.addEventListener("scroll", myScrollFunc);

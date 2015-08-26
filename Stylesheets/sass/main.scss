@@ -16,6 +16,9 @@ html {
 a {
 	text-decoration: none;
 	color: lightblue;
+	&:hover {
+		color: #8aacb8;
+	}
 }
 
 /* clearfix */
@@ -80,6 +83,20 @@ nav {
 			float: left;
 			text-align: right;
 		}
+	}
+}
+
+.pawprint {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	@include transition (all 1s);
+	@include box-shadow (0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+	img {
+		margin: 0 auto;
 	}
 }
 
