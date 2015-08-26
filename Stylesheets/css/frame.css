@@ -1,0 +1,146 @@
+.span12 {
+  width: 100%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span11 {
+  width: 91.66667%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span10 {
+  width: 83.33333%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span9 {
+  width: 75%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span8 {
+  width: 66.66667%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span7 {
+  width: 58.33333%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span6 {
+  width: 50%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span5 {
+  width: 41.66667%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span4 {
+  width: 33.33333%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span3 {
+  width: 25%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span2 {
+  width: 16.66667%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.span1 {
+  width: 8.33333%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media (max-width: 750px) {
+  .span12, .span11, .span10, .span9 {
+    width: 100%;
+  }
+
+  .span8 {
+    width: 91.66667%;
+  }
+
+  .span7 {
+    width: 83.33333%;
+  }
+
+  .span6 {
+    width: 75%;
+  }
+
+  .span5 {
+    width: 66.66667%;
+  }
+
+  .span4 {
+    width: 58.33333%;
+  }
+
+  .span3 {
+    width: 50%;
+  }
+
+  .span2 {
+    width: 41.66667%;
+  }
+
+  .span1 {
+    width: 33.33333%;
+  }
+}
+@media (max-width: 450px) {
+  .span12, .span11, .span10, .span9, .span8, .span7, .span6 {
+    width: 100%;
+  }
+
+  .span5 {
+    width: 91.66667%;
+  }
+
+  .span4 {
+    width: 83.33333%;
+  }
+
+  .span3 {
+    width: 75%;
+  }
+
+  .span2 {
+    width: 66.66667%;
+  }
+
+  .span1 {
+    width: 58.33333%;
+  }
+}

@@ -1,0 +1,139 @@
+// Responsive framework - based on units of 12
+
+$unit: 100%/12;
+
+@mixin fluid {
+	display: block;
+	float: left;
+	box-sizing: border-box;
+}
+
+.span12 {
+	width: $unit*12;
+	@include fluid;
+}
+
+.span11 {
+	width: $unit*11;
+	@include fluid;
+}
+
+.span10 {
+	width: $unit*10;
+	@include fluid;
+}
+
+.span9 {
+	width: $unit*9;
+	@include fluid;
+}
+
+.span8 {
+	width: $unit*8;
+	@include fluid;
+}
+
+.span7 {
+	width: $unit*7;
+	@include fluid;
+}
+
+.span6 {
+	width: $unit*6;
+	@include fluid;
+}
+
+.span5 {
+	width: $unit*5;
+	@include fluid;
+}
+
+.span4 {
+	width: $unit*4;
+	@include fluid;
+}
+
+.span3 {
+	width: $unit*3;
+	@include fluid;
+}
+
+.span2 {
+	width: $unit*2;
+	@include fluid;
+}
+
+.span1 {
+	width: $unit*1;
+	@include fluid;
+}
+
+
+// Tablets - max-width of 750px
+
+@media (max-width: 750px) {
+	.span12, .span11, .span10, .span9 {
+		width: $unit*12;
+	}
+
+	.span8 {
+		width: $unit*11;
+	}
+
+	.span7 {
+		width: $unit*10;
+	}
+
+	.span6 {
+		width: $unit*9;
+	}
+
+	.span5 {
+		width: $unit*8;
+	}
+
+	.span4 {
+		width: $unit*7;
+	}
+
+	.span3 {
+		width: $unit*6;
+	}
+
+	.span2 {
+		width: $unit*5;
+	}
+
+	.span1 {
+		width: $unit*4;
+	}
+}
+
+
+// Phone - max-width of 450px
+
+@media (max-width: 450px) {
+	.span12, .span11, .span10, .span9, .span8, .span7, .span6 {
+		width: $unit*12;
+	}
+
+	.span5 {
+		width: $unit*11;
+	}
+
+	.span4 {
+		width: $unit*10;
+	}
+
+	.span3 {
+		width: $unit*9;
+	}
+
+	.span2 {
+		width: $unit*8;
+	}
+
+	.span1 {
+		width: $unit*7;
+	}
+}
