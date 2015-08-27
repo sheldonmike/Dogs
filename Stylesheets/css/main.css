@@ -179,9 +179,13 @@ a:hover {
 
 header {
   position: fixed;
+  z-index: 2;
   background-color: white;
   height: 50px;
   width: 100%;
+  -moz-box-shadow: 0 1px 1px -3px rgba(0, 0, 0, 0.2), 0 2px 20px -3px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 1px 1px -3px rgba(0, 0, 0, 0.2), 0 2px 20px -3px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 1px 1px -3px rgba(0, 0, 0, 0.2), 0 2px 20px -3px rgba(0, 0, 0, 0.19);
 }
 header .header-container {
   max-width: 1200px;
@@ -334,6 +338,27 @@ nav ul li {
 }
 #roscoe p {
   text-align: left;
+}
+
+.img-gallery .row {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 330px;
+}
+.img-gallery .dog-pic {
+  text-align: center;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.img-gallery .dog-pic:hover {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -moz-transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  -webkit-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
 }
 
 @-moz-keyframes title {

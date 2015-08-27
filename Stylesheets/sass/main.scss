@@ -37,9 +37,11 @@ a {
 
 header {
 	position: fixed;
+	z-index: 2;
 	background-color: white;
 	height: 50px;
 	width: 100%;
+	@include box-shadow (0 1px 1px -3px rgba(0, 0, 0, 0.2), 0 2px 20px -3px rgba(0, 0, 0, 0.19));
 	.header-container {
 		max-width: 1200px;
 		margin: 0 auto;
@@ -177,6 +179,22 @@ nav {
 	}
 	p {
 		text-align: left;
+	}
+}
+
+.img-gallery {
+	.row {
+		max-width: 1000px;
+		margin: 0 auto;
+		height: 330px;
+	}
+	.dog-pic {
+		text-align: center;
+		@include transition (all 1s ease);
+		&:hover {
+			@include filter (grayscale(100%));
+			@include transform (scale(1.03,1.03));
+		}
 	}
 }
 

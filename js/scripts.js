@@ -226,3 +226,19 @@ var myScrollFunc = function() {
 };
 
 window.addEventListener("scroll", myScrollFunc);
+
+
+
+$(function() {                       //run when the DOM is ready
+  $(".puppy-image").click(function() {  //use a class, since your ID gets mangled
+    $(this).addClass("woof");      //add the class to the clicked element
+  });
+});
+
+
+$(function() {
+	$(".puppy-image").mouseover(function(){
+		var audio = new Audio ('../js/bark.mp3');
+		audio.play();
+	});
+});
