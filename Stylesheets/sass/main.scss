@@ -3,14 +3,14 @@
 @import 'frame';
 @import url("normalize.css");
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Indie+Flower);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Indie+Flower|Montserrat);
 
 * {
 	box-sizing: border-box;
 }
 
 html {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Montserrat','Open Sans', Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -96,17 +96,77 @@ nav {
 	}
 }
 
-.pawprint {
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
+// .pawprint {
+// 	width: 60px;
+// 	height: 60px;
+// 	border-radius: 50%;
+// 	@include box-shadow (0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+// 	img {
+// 		margin: 0 auto;
+// 	}
+// }
+
+.flip-container {
+	perspective: 1000;
 	position: fixed;
 	right: 20px;
 	bottom: 20px;
 	@include transition (all 1s);
-	@include box-shadow (0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
-	img {
-		margin: 0 auto;
+	&:hover .flipper, &.hover .flipper {
+		@include transform (rotateY(180deg));
+	}
+}
+
+.flip-container, .front, .back {
+	width: 60px;
+	height: 60px;
+}
+
+/* flip speed goes here */
+.flipper {
+	@include transition (0.6s);
+	@include transform-style (preserve-3d);
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	@include transform (rotateY(0deg));
+	div {
+		width: 60px;
+		height: 60px;
+		@include box-shadow (0 8px 17px -5px rgba(0, 0, 0, 0.2), 0 6px 20px -5px rgba(0, 0, 0, 0.19));
+	    background-color: rgba(0,0,0,0.2);
+	    color: white;
+		p {
+		    text-align: center;
+		    position: relative;
+    		left: 25%;
+		}
+	}
+}
+
+/* back, initially hidden pane */
+.back {
+	@include transform (rotateY(180deg));
+	.pawprint {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		@include box-shadow (0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+		img {
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -136,6 +196,10 @@ nav {
 	text-align: center;
 	font-size: 4rem;
 	color: black;
+	@media (min-width: 950px) {
+		width: 50%;
+		float: right;
+	}
 }
 
 .iframe {
@@ -240,5 +304,15 @@ nav {
 	80% {@include transform (translateX(10px));}
 	100% {@include transform (translateX(0px)); opacity: 1;}
 }
+
+
+
+
+
+
+
+
+
+
 
 

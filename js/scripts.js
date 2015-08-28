@@ -219,9 +219,9 @@ paw = document.getElementById("paw");
 var myScrollFunc = function() {
   var y = window.scrollY;
   if (y >= 100) {
-    paw.className = "pawprint valign-wrapper visible"
+    paw.className = "flip-container visible"
   } else {
-    paw.className = "pawprint valign-wrapper hidden"
+    paw.className = "flip-container hidden"
   }
 };
 

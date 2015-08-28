@@ -1,5 +1,5 @@
 @import url("normalize.css");
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Indie+Flower);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Indie+Flower|Montserrat);
 .span12 {
   width: 100%;
   display: block;
@@ -151,7 +151,7 @@
 }
 
 html {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat','Open Sans', Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -238,10 +238,8 @@ nav ul li {
   text-align: right;
 }
 
-.pawprint {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.flip-container {
+  perspective: 1000;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -249,11 +247,79 @@ nav ul li {
   -o-transition: all 1s;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 60px;
+  height: 60px;
+}
+
+/* flip speed goes here */
+.flipper {
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.front div {
+  width: 60px;
+  height: 60px;
+  -moz-box-shadow: 0 8px 17px -5px rgba(0, 0, 0, 0.2), 0 6px 20px -5px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px -5px rgba(0, 0, 0, 0.2), 0 6px 20px -5px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 17px -5px rgba(0, 0, 0, 0.2), 0 6px 20px -5px rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.front div p {
+  text-align: center;
+  position: relative;
+  left: 25%;
+}
+
+/* back, initially hidden pane */
+.back {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.back .pawprint {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.pawprint img {
+.back .pawprint img {
   margin: 0 auto;
 }
 
@@ -291,6 +357,12 @@ nav ul li {
   text-align: center;
   font-size: 4rem;
   color: black;
+}
+@media (min-width: 950px) {
+  .banner-text {
+    width: 50%;
+    float: right;
+  }
 }
 
 .iframe {
