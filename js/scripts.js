@@ -237,8 +237,10 @@ $(function() {                       //run when the DOM is ready
 
 
 $(function() {
-	$(".puppy-image").mouseover(function(){
+	$(".puppy-image").click(function(){
 		var audio = new Audio ('../js/bark.mp3');
 		audio.play();
 	});
 });
+
+
