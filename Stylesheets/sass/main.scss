@@ -19,6 +19,7 @@ a {
 	color: lightblue;
 	&:hover {
 		color: #8aacb8;
+		cursor: pointer;
 	}
 }
 
@@ -46,6 +47,14 @@ header {
 	.header-container {
 		max-width: 1200px;
 		margin: 0 auto;
+	}
+	@media (max-width: 950px) {
+		max-height: 100px;
+		height: auto;
+	}
+	@media (max-width: 537px) {
+		max-height: none;
+		height: auto;
 	}
 }
 
@@ -84,6 +93,14 @@ figure {
 nav {
 	span {
 		font-size: 2.3rem;
+		@media (max-width: 1050px) {
+			font-size: 1.8rem;
+		}
+	}
+	> span:first-child {
+		@media (max-width: 400px) {
+			display: none;
+		}
 	}
 	.logo {
 		text-align: center;
@@ -108,6 +125,26 @@ nav {
 					height: inherit;
 				}
 			}
+			@media (max-width: 650px) {
+				width: 100%;
+				float: none;
+			}
+		}
+		@media (max-width: 950px) {
+			line-height: 1.6;
+			max-height: 100px;
+		}
+		@media (max-width: 400px) {
+			line-height: 2;
+			float: right!important;
+		}
+	}
+	@media (max-width: 950px) {
+		.span5 {
+			max-width: 40%;
+		}
+		.span2 {
+			max-width: 20%;
 		}
 	}
 }
