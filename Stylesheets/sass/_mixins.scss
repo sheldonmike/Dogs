@@ -1,0 +1,8 @@
+// Transform origin Mixin
+
+@mixin transform-origin-mix($x, $y, $z) {
+	-moz-transform-origin: $x $y $z;
+	-ms-transform-origin: $x $y $z;
+	-webkit-transform-origin: $x $y $z;
+	transform-origin: $x $y $z;
+}

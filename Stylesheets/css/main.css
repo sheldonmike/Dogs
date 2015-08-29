@@ -237,10 +237,10 @@ nav ul li {
   float: left;
 }
 nav ul li:hover .breeds {
-  -moz-transform-origin: center top 0px 50%;
-  -ms-transform-origin: center top 0px 50%;
-  -webkit-transform-origin: center top 0px 50%;
-  transform-origin: center top 0px 50%;
+  -moz-transform-origin: center top 0px;
+  -ms-transform-origin: center top 0px;
+  -webkit-transform-origin: center top 0px;
+  transform-origin: center top 0px;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   -webkit-transition: all 0.5s ease;
@@ -268,10 +268,10 @@ div.breeds {
   -moz-box-shadow: 0px 15px 92px -30px rgba(0, 0, 0, 0.21);
   -webkit-box-shadow: 0px 15px 92px -30px rgba(0, 0, 0, 0.21);
   box-shadow: 0px 15px 92px -30px rgba(0, 0, 0, 0.21);
-  -moz-transform-origin: center top 0px 50%;
-  -ms-transform-origin: center top 0px 50%;
-  -webkit-transform-origin: center top 0px 50%;
-  transform-origin: center top 0px 50%;
+  -moz-transform-origin: center top 0px;
+  -ms-transform-origin: center top 0px;
+  -webkit-transform-origin: center top 0px;
+  transform-origin: center top 0px;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   -webkit-transition: all 0.5s ease;
